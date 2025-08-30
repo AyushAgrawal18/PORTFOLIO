@@ -7,7 +7,6 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -29,15 +28,21 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-      <Container>
+    <Navbar expand="lg" className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <Container className="nav-container">
+        {/* Logo */}
         <Navbar.Brand href="#home">
           <img src={logo} alt="logo" />
         </Navbar.Brand>
+
+        {/* Mobile Toggle */}
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
+
+        {/* Nav Links + Right Side */}
         <Navbar.Collapse id="basic-navbar-nav">
+          {/* Links aligned left */}
           <Nav className="me-auto">
             <Nav.Link
               href="#home"
@@ -49,34 +54,48 @@ export const NavBar = () => {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#link"
+              href="#skills"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("skills")}
             >
-              Skillsk
+              Skills
             </Nav.Link>
             <Nav.Link
-              href="#link"
+              href="#projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("projrcts")}
+              onClick={() => onUpdateActiveLink("projects")}
             >
               Projects
             </Nav.Link>
           </Nav>
+
+          {/* Social icons + button aligned right */}
           <span className="navbar-text">
-            <div className="social-icons">
-              <a href="#">
-                <img src={navIcon1} alt="" />
+            <div className="social-icon">
+              <a
+                href="https://www.linkedin.com/in/ayush-kumar-agrawal-376440303/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon1} alt="LinkedIn" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="" />
+              <a
+                href="https://www.facebook.com/profile.php?id=100017614512335"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon2} alt="Facebook" />
               </a>
-              <a href="#">
-                <img src={navIcon3} alt="" />
+              <a
+                href="https://www.instagram.com/ayush_agrawal_18/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon3} alt="Instagram" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
