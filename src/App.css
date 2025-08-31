@@ -355,13 +355,15 @@ span.navbar-text {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  margin: 0;
+  background-image: url("./assets/img/skill-bg.png");
 }
 .skill-bx {
-  background: #151515;
+  /* background: #151515; */
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  /* margin-top: -60px; */
 }
 .skill h2 {
   font-size: 45px;
