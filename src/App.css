@@ -103,10 +103,15 @@ nav.navbar {
   z-index: 9999;
   transition: 0.32s ease-in-out;
 }
+.me-auto {
+  margin-left: 25%;
+}
 
 .nav-container {
   display: flex;
   justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 nav.navbar .navbar-collapse {
@@ -242,6 +247,109 @@ span.navbar-text {
   width: 100%;
   border-radius: 30px;
 }
+
+/* Home Css */
+
+.banner {
+  margin-top: 0;
+  background-image: url("./assets/img/banner-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 24px;
+  line-height: 1.1em;
+}
+
+.banner p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 90%;
+  text-align: justify;
+}
+
+.banner button {
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  padding: 14px 48px;
+  font-size: 25px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.banner button svg {
+  font-size: 22px;
+  margin-left: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.banner button:hover svg {
+  transform: translateX(6px);
+}
+
+.banner img {
+  animation: upDown 3s ease-in-out infinite;
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/* @media (max-width: 768px) {
+  .banner h1 {
+    font-size: 40px;
+  }
+  .banner p {
+    width: 100%;
+  } */
+
+.wrap {
+  text-align: center;
+}
+
+/* .banner .container {
+  margin: 10%;
+} */
 
 /************ Skills Css ************/
 .skill {
